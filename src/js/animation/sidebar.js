@@ -58,5 +58,7 @@ const sidebarAnimation = {
 };
 
 if (typeof window !== 'undefined') {
-  sidebarAnimation.init();
+  document.addEventListener('DOMContentLoaded', () => {
+    sidebarAnimation.init();
+  });
 }

@@ -197,5 +197,7 @@ const parallaxEffect = {
 };
 
 if (typeof window !== 'undefined') {
-  parallaxEffect.init();
+  document.addEventListener('DOMContentLoaded', () => {
+    parallaxEffect.init();
+  });
 }

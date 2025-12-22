@@ -316,5 +316,7 @@ const commonAnimation = {
 };
 
 if (typeof window !== 'undefined') {
-  commonAnimation.init();
+  document.addEventListener('DOMContentLoaded', () => {
+    commonAnimation.init();
+  });
 }

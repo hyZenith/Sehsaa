@@ -155,5 +155,7 @@ const sliderAnimation = {
 };
 
 if (typeof window !== 'undefined') {
-  sliderAnimation.init();
+  document.addEventListener('DOMContentLoaded', () => {
+    sliderAnimation.init();
+  });
 }

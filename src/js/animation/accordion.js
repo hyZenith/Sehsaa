@@ -212,5 +212,7 @@ const accordionAnimation = {
 };
 
 if (typeof window !== 'undefined') {
-  accordionAnimation.init();
+  document.addEventListener('DOMContentLoaded', () => {
+    accordionAnimation.init();
+  });
 }

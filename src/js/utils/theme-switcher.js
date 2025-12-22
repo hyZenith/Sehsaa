@@ -99,5 +99,7 @@ const themeSwitcher = {
 };
 
 if (typeof window !== 'undefined') {
-  themeSwitcher.init();
+  document.addEventListener('DOMContentLoaded', () => {
+    themeSwitcher.init();
+  });
 }

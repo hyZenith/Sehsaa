@@ -63,5 +63,7 @@ const progressAnimation = {
 };
 
 if (typeof window !== 'undefined') {
-  progressAnimation.init();
+  document.addEventListener('DOMContentLoaded', () => {
+    progressAnimation.init();
+  });
 }
