@@ -7,7 +7,7 @@ const leaflet = {
     }
 
     // Initialize the map
-    const leafletMap = L.map('map').setView([39.8283, -98.5795], 6);
+    const leafletMap = L.map('map').setView([19.1551, 72.8679], 14);
 
     // Add tile layer with better styling
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
