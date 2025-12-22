@@ -19,22 +19,18 @@ Hero section
           class="flex flex-col md:flex-row items-center pt-36 md:pt-40 gap-y-16 lg:pt-[150px] xl:pt-[170px] justify-center"
         >
           <div>
-            <div class="space-y-2 md:space-y-4 mb-6 md:mb-8 text-center md:text-left">
-              <h1
-                data-ns-animate
-                data-delay="0.2"
-                class="max-w-full lg:max-w-[507px] dark:text-secondary"
-              >
-                Welcome to
-                <img
-                  src="public/logo.png"
-                  alt="SEHSAA"
-                  class="inline-block h-10 md:h-14 lg:h-16 align-middle ml-2"
-                />
+            <div class="space-y-3 md:space-y-4 mb-6 md:mb-8 text-center md:text-left">
+              <h1 data-ns-animate data-delay="0.2" class="max-w-full lg:max-w-[760px]">
+                <span class="block italic text-5xl md:text-xl text-secondary/80">
+                  Welcome to
+                </span>
+                <span class="block text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-black mt-2">
+                  Your Enterprise & Government-Grade Digital Transformation Partner
+                </span>
               </h1>
-              <p data-ns-animate data-delay="0.4" class="md:max-w-[429px] text-secondary/90">
+              <!-- <p data-ns-animate data-delay="0.4" class="md:max-w-[429px] text-secondary/90">
                 Enterprise & Government-Grade Digital Transformation Partner
-              </p>
+              </p> -->
               <p data-ns-animate data-delay="0.4" class="md:max-w-[429px] text-secondary/60">
                 We build secure, scalable software platforms for Government, BFSI, Infrastructure,
                 Healthcare, and Enterprises.
@@ -102,24 +98,16 @@ Hero section
             </div>
 
             <!-- btn-white -->
-            <div data-ns-animate data-delay="0.8" class="w-[95%] mx-auto md:mx-0 md:w-full ">
-              <a
-                href="#"
-                class="btn btn-white btn-xl hover:btn-secondary w-full dark:btn-black dark:hover:btn-accent md:w-auto"
-                aria-label="Book a consultation call"
-              >
+            <div data-ns-animate data-delay="0.8" class="w-[95%] mx-auto md:mx-0 md:w-full flex flex-col sm:flex-row gap-3 items-center md:items-start">
+              <a href="#" class="btn btn-white btn-xl hover:btn-secondary w-full md:w-auto" aria-label="Book a consultation call">
                 <span>Request Consultation</span>
               </a>
-              <a
-                href="#"
-                class="btn btn-white btn-xl hover:btn-secondary w-full dark:btn-black dark:hover:btn-accent md:w-auto"
-                aria-label="View our capabilities"
-              >
+              <a href="#" class="btn btn-white btn-xl w-full md:w-auto opacity-90 hover:opacity-100 sm:ml-2" aria-label="View our capabilities">
                 <span>View our Capabilities</span>
               </a>
             </div>
           </div>
-          <figure class="max-w-[643px] w-full" data-ns-animate data-delay="0.9" data-offset="50">
+          <figure class="max-w-[643px] w-full mx-auto md:ml-8" data-ns-animate data-delay="0.9" data-offset="50">
             <img
               src="./images/ns-img-162.png"
               alt="App showcase illustration"
@@ -134,10 +122,23 @@ Hero section
   <!-- Client Logos Section -->
 
   <aside class="main-container relative mt-[64px] lg:mt-[120px] z-10" aria-label="Our Clients">
-    <div
+    <div class="about">
+      <p class="text-secondary/90 md:text-left text-sm md:text-base dark:text-white">
+        SEHSAA Solutions Pvt. Ltd. is a technology services company specializing in the design and
+        development of secure, scalable, and domain-specific digital platforms.
+        <br />
+        We work closely with government bodies, BFSI institutions, and enterprises to build software
+        systems that operate in regulated, on-premise, offline, and high-security environments. Our
+        strength lies in deep engineering expertise, compliance-focused architecture, and long-term
+        system support.
+        <br />
+        We do not offer generic products — every solution is built to match real operational needs.
+      </p>
+    </div>
+    <!-- <div
       data-ns-animate
       data-delay="0.2"
-      class="flex items-center flex-wrap md:flex-nowrap justify-center gap-4 md:gap-x-4 lg:gap-x-8"
+      class="flex items-center flex-wrap md:flex-nowrap justify-center gap-4 md:gap-x-4 lg:gap-x-8 mt-[100px]"
       role="list"
     >
       <figure role="listitem" class="lg:min-w-36 lg:ml-8">
@@ -200,6 +201,6 @@ Hero section
           class="lg:w-auto hidden dark:inline-block"
         />
       </figure>
-    </div>
+    </div> -->
   </aside>
 </section>
