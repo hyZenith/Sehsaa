@@ -14,7 +14,7 @@ Integration section
         
         <!-- Tabs -->
         <div class="flex flex-wrapjustify-center items-center gap-x-8 gap-y-4 border-b border-gray-200 dark:border-gray-700 pb-4 max-w-5xl mx-auto overflow-x-auto px-4 hide-scrollbar">
-          <button onclick="switchTab('mobile')" id="tab-mobile" class="tab-btn text-sm md:text-base font-semibold uppercase px-6 py-2 rounded-md transition-all duration-300 text-secondary dark:text-white hover:text-primary relative group">
+          <button onclick="switchTab('mobile')" id="tab-mobile" class="tab-btn text-sm md:text-base font-semibold uppercase px-6 py-2 rounded-md transition-all duration-300 text-gray-500 dark:text-gray-400 hover:text-primary relative group">
             MOBILE
           </button>
           <button onclick="switchTab('frontend')" id="tab-frontend" class="tab-btn text-sm md:text-base font-semibold uppercase px-6 py-2 rounded-md transition-all duration-300 text-gray-500 dark:text-gray-400 hover:text-primary">
@@ -51,41 +51,12 @@ Integration section
     position: relative;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
-  .tab-active::after {
-    content: '';
-    position: absolute;
-    bottom: -16px; /* Adjust based on border-b padding */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 3px;
-    background-color: #0F172A;
-    display: none; /* Using pill style instead for now based on image 1 roughly */
-  }
-  /* Custom pill shape for active tab based on reference image 1 */
-  .tab-active {
-    background-color: #0b1e3e; /* Deep blue from image */
-    color: #ffffff !important;
-    transform: skewX(-10deg);
-  }
-  .tab-active span {
-    display: inline-block;
-    transform: skewX(10deg);
-  }
   
-  /* Fix for the skew transform on text */
+  /* Rectangular shape adjustments */
   .tab-btn {
-    transform: skewX(-10deg);
-    border-radius: 0;
+    border-radius: 4px; /* Slight rounded corners for better aesthetics, or use 0 for strict rectangle */
+    transform: none;
   }
-  .tab-btn span {
-    display: inline-block;
-    transform: skewX(10deg);
-  }
-  /* But reference image 1 active tab is a trapezoid/skewed shape? 
-     Let's stick to a simpler pill or block if skew is too much specific CSS without seeing code.
-     Actually checking image 1: 'DATABASE' is in a dark blue skewed box. 
-  */
 </style>
 
 <script>
@@ -127,9 +98,7 @@ Integration section
       { name: 'Node.js', icon: 'nodejs.svg' },
       { name: 'Java', icon: 'java.svg' },
       { name: 'Python', icon: 'python.svg' },
-      { name: 'PHP', icon: 'php.svg' }, // Assuming PHP is available or I should download? 
-       // I downloaded python, java, nodejs. I need PHP?
-       // Let's stick to what I have or standard ones.
+      { name: 'PHP', icon: 'php.svg' }, 
     ],
     cms: [
       { name: 'Drupal', icon: 'drupal.svg' },
@@ -189,19 +158,12 @@ Integration section
       btn.classList.remove('tab-active');
       btn.classList.add('text-gray-500', 'dark:text-gray-400');
       btn.classList.remove('text-white'); // clear generic
-      
-      // Reset content to be span wrapped for skew fix
-      if(btn.querySelector('span') === null) {
-          const text = btn.innerText;
-          btn.innerHTML = '<span>' + text + '</span>';
-      }
     });
     
     const activeBtn = document.getElementById('tab-' + category);
     if(activeBtn) {
         activeBtn.classList.add('tab-active');
         activeBtn.classList.remove('text-gray-500', 'dark:text-gray-400');
-        // activeBtn.classList.add('text-white'); // Handled by CSS
     }
     
     renderTechs(category);
@@ -212,7 +174,7 @@ Integration section
     switchTab('mobile');
   });
   
-  // Fallback if DOMContentLoaded already fired (for SPA navigation if any, though this is likely static)
+  // Fallback if DOMContentLoaded already fired 
   if (document.readyState === 'complete' || document.readyState === 'interactive') {
      setTimeout(() => switchTab('mobile'), 100);
   }
