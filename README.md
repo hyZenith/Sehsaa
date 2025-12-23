@@ -1,4 +1,4 @@
-# Next SaaS HTML Template
+# SEHSAA Solutions - Enterprise HTML Template
 
 A comprehensive, modern HTML template collection for SaaS businesses, startups, and web applications. This project provides 1800+ beautifully designed pages across 50+ industry-specific themes, each with complete inner pages including authentication, pricing, blog, contact, and more.
 
